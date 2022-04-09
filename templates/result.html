@@ -1,0 +1,72 @@
+
+{% extends 'headerpage.html' %}
+
+{% block head %}
+    <style>
+           /*----------photo----*/
+    .covid-area{
+     height: 50vh;
+     background:url("./static/social-distance.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    
+    
+   
+ }
+ 
+ .heading2{
+   
+        position: absolute;
+        text-align:center ;
+     
+        top:25%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px;
+    }
+ 
+ .main-title2{
+     color:black;
+     font-style:inherit;
+     font-display: none;
+     border-bottom: none;
+     font-size: 30px;
+     
+ }
+ .primary2{
+     color:rgb(24, 2, 26);
+     font-style: italic;
+     font-size: 25px;
+ }
+/*---------- drop dowm menu-----*/
+.test{
+    text-align: center;
+}
+
+
+
+
+        /*----------menu-----------------*/
+       
+        
+        
+        </style>
+{% endblock head %}
+{% block body %}
+    <section class="covid-area " id="covid">
+        <div class="heading2">
+            <h1 class="main-title2">..COVIX2.0..</h1>
+            <p class="primary2">Your health is our primary concern</p>
+        </div>
+       
+    </section>
+    <br>
+    <br>
+<center><h1 class="text-center" >-:PREDICTION:-</h1></center>
+<br>
+<center><p><h1 class="text-center">{{ans}}</h1>
+</p></center>
+
+{% endblock %}

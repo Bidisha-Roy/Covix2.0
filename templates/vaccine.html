@@ -1,0 +1,116 @@
+{% extends 'headerpage.html' %}
+{% load static %}
+
+{% block head %}
+
+
+<style>
+    /*----------photo----*/
+    .covid-area{
+     height: 50vh;
+     background:url("./static/vaccine.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    
+    
+   
+ }
+ 
+ .heading2{
+   
+        position: absolute;
+        text-align:center ;
+     
+        top:25%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px;
+    }
+ 
+ .main-title2{
+     color:black;
+     font-style:inherit;
+     font-display: none;
+     border-bottom: none;
+     font-size: 30px;
+     
+ }
+ .primary2{
+     color:rgb(24, 2, 26);
+     font-style: italic;
+     font-size: 25px;
+ }
+/*---------- drop dowm menu-----*/
+.test{
+    text-align: center;
+}
+        </style>
+{% endblock head %}
+
+
+
+
+{% block body %}
+
+    <!--photo-->
+    <section class="covid-area " id="covid">
+        <div class="heading2">
+            <h1 class="main-title2">..COVIX2..</h1>
+            <p class="primary2">Your health is our primary concern</p>
+        </div>
+       
+    </section>
+
+
+<!----vaccine-menu-->
+<!--DESCRIPTION-->
+ <section id="description2">
+<div class="about2-wrapper container2">
+    <div class="about2-text">
+       
+         <h2>HOW TO REGISTER FOR COVID-VACCINATON</h2>
+         <p> Registering yourself and your beneficiaries on the CoWin portal is a simple process. All you need is your mobile number and a government-issued photo ID proof like your Aadhaar, driving licence, etc</p><br>
+          <p>Step 1: Log in to the CoWin portal – either on the website  <a href="https://www.cowin.gov.in/home">COWIN-PORTAL</a> or on the CoWin app. On the right-hand top corner on the site, you’ll see the Register/Sign In option. Click on the same.
+
+</p><br>
+
+<p>Step 2: You’ll be asked to enter your 10-digit mobile number. You can also opt to sign-in via Aarogya Setu or UMANG account. </p><br>
+
+<p> Step 3: You’ll be asked to enter the OTP you’ve received on your mobile number for verification purpose.</p><br>
+
+
+<p> Step 4: Once your OTP is verified, you can start the registration process by clicking on the Register Member option. You are allowed to register 4 members in total, including yourself.</p><br>
+
+
+
+<p>Step 5:You will be asked to enter your photo ID proof type and ID number. Enter your name as mentioned in your Photo ID proof – you’ll be asked to show the same for verification at the vaccination centre. Fill in the other details such as gender and your year of birth, and click on the Register button. </p><br>
+
+<p> Step 6: You’ve successfully registered a member now. For each member, you’ll be following the same registration steps as mentioned above. Once you’re done registering, you’ll see the below dashboard with details such as reference ID, secret code, ID proof and appointment details about each registered member. In case you want to remove a member, you just need to click on the bin button at the right-side for that particular member. To check for available slots and schedule an appointment, click on the Schedule button.</p><br>
+<p>Step 7: On clicking the Schedule button, you’ll see a banner pop-up towards the bottom of the screen. Click on the Schedule Now button to proceed.</p><br>
+<p>Step 8: Now, you’ll see the option to book an appointment. You can search for slots either via pin code or via your preferred district. </p> <br>
+<p>Step 9: You’ll see the list of centres and availability. You can filter your search based on your preference. The available filter options are Age 18+, Age 45+, Covishield, Covaxin, Paid and Free. </p><br>
+<p> Step 10: In case there is a slot open, a green button will be seen, mentioning the number of slots available. You can click on the same to proceed to booking – you’ll be required to select your preferred time slot and enter a captcha code to finish booking. On successful booking, you’ll get complete details about your vaccination, which can be downloaded as a PDF. You’ll also receive an SMS with the details.</p><br>
+ <p>That’s it! You have successfully booked a vaccination slot on the CoWin portal. Keep the below guidelines in mind (as mentioned on the CoWin portal):
+
+
+    </div>
+    <div class="about2-img">
+        <img src="./static/vaccine2.jpeg"alt="DESCRIPTION">
+    </div>
+</div>
+ </section>
+    
+
+
+<!---------------footer-->
+   <footer class="footer2 con-foot2">
+    
+    <p>STAY SAFE AND HEALTHY</p>
+  </footer>
+
+
+{% endblock body %}
+
+

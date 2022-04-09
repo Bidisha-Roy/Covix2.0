@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+{% extends 'headerpage.html' %}
+{% load static %}
+<html lang="en">
+{% block head %}
+    <style>
+           /*----------photo----*/
+    .covid-area{
+     height: 50vh;
+     background:url("./static/social-distance.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    
+    
+   
+ }
+ 
+ .heading2{
+   
+        position: absolute;
+        text-align:center ;
+     
+        top:25%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px;
+    }
+ 
+ .main-title2{
+     color:black;
+     font-style:inherit;
+     font-display: none;
+     border-bottom: none;
+     font-size: 30px;
+     
+ }
+ .primary2{
+     color:rgb(24, 2, 26);
+     font-style: italic;
+     font-size: 25px;
+ }
+/*---------- drop dowm menu-----*/
+.test{
+    text-align: center;
+}
+
+
+
+
+        /*----------menu-----------------*/
+       
+        
+        
+        </style>
+{% endblock head %}
+
+
+{% block body %}
+
+    <!--photo-->
+    <section class="covid-area " id="covid">
+        <div class="heading2">
+            <h1 class="main-title2">..COVIX2.0..</h1>
+            <p class="primary2">Your health is our primary concern</p>
+        </div>
+       
+    </section>
+
+
+    
+    <!----menu-->
+
+    <form action="{% url 'result' %}">
+    {% csrf_token %}
+    <section id="food-menu">
+        <h2 class="food-menu-heading">
+            COVID-SYMPTOMS
+        </h2>
+      <div class="food-menu-container ">
+          <!--item1-->
+          <div class="food-menu-item  item1">
+              <div class="food-description">
+                  <h2 class="food-title">
+                 Breathing Problem
+                  </h2>
+              </div>
+              <div class="form-group">
+
+                 <select class="form-control custom-select" name="breathing-problem" id="breathing-problem">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+          </div>
+
+<!--item2-->
+<div class="food-menu-item item2">
+    <div class="food-description">
+        <h2 class="food-title">
+       Hyper Tension
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="hyperTension" id="hyperTension">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item3-->
+<div class="food-menu-item item3">
+    <div class="food-description">
+        <h2 class="food-title">
+       Fever
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="fever" id="fever">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+                 </select>
+              </div>
+</div>
+<!--item4-->
+<div class="food-menu-item item4">
+    <div class="food-description">
+        <h2 class="food-title">
+       Fatigue
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="fatigue" id="fatigue">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item5-->
+
+<div class="food-menu-item item5">
+    <div class="food-description">
+        <h2 class="food-title">
+            Dry Cough
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="dry-cough" id="dry-cough">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item6-->
+
+<div class="food-menu-item item6">
+    <div class="food-description">
+        <h2 class="food-title">
+            Gastrointestinal
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="gastrointestinal" id="gastrointestinal">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item7-->
+
+<div class="food-menu-item item7">
+    <div class="food-description">
+        <h2 class="food-title">
+        Sore Throat
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Sore-Throat" id="Sore-Throat">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item8-->
+<div class="food-menu-item item8">
+    <div class="food-description">
+        <h2 class="food-title">
+        Abroad Travel
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="abroad-travel" id="abroad-travel">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item9-->
+<div class="food-menu-item item9">
+    <div class="food-description">
+        <h2 class="food-title">
+        Chronic Lung Disease
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Chronic-Lung-Disease" id="Chronic-Lung-Disease">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+
+
+<!--item10-->
+
+<div class="food-menu-item item10">
+    <div class="food-description">
+        <h2 class="food-title">
+        Headache
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Headache" id="Headache">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+
+<!--item11-->
+<div class="food-menu-item item11">
+    <div class="food-description">
+        <h2 class="food-title">
+        Heart Disease
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Heart-Disease" id="Heart-Disease">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item12-->
+
+<div class="food-menu-item item12">
+    <div class="food-description">
+        <h2 class="food-title">
+    Diabetes
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Diabetes" id="Diabetes">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item13-->
+
+
+<div class="food-menu-item item13">
+    <div class="food-description">
+        <h2 class="food-title">
+        Visited Public Exposed Places
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select  class="form-control" name="Visited-Public-Exposed-Places" id="Visited-Public-Exposed-Places">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item14-->
+
+<div class="food-menu-item item14">
+    <div class="food-description">
+        <h2 class="food-title">
+        Family working in Public Exposed Places
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Family-working" id="Family-working">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item15-->
+<div class="food-menu-item item15">
+    <div class="food-description">
+        <h2 class="food-title">
+        Wearing Masks
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Wearing-Masks" id="Wearing-Masks">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item16-->
+
+<div class="food-menu-item item16">
+    <div class="food-description">
+        <h2 class="food-title">
+        Sanitization from Market
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Sanitization" id="Sanitization">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item17-->
+
+<div class="food-menu-item item17">
+    <div class="food-description">
+        <h2 class="food-title">
+        Running Nose
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Running-Nose" id="Running-Nose">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item18-->
+
+<div class="food-menu-item item18">
+    <div class="food-description">
+        <h2 class="food-title">
+    contact with covid patient
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="contact-with" id="contact-with">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+
+<!--item19-->
+
+<div class="food-menu-item item19">
+    <div class="food-description">
+        <h2 class="food-title">
+        Asthema
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select  class="form-control" name="Asthema" id="Asthema">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!--item20-->
+
+<div class="food-menu-item item20">
+    <div class="food-description">
+        <h2 class="food-title">
+        Attended large gathering
+        </h2>
+    </div>
+              <div class="form-group">
+
+                 <select class="form-control" name="Attended-large" id="Attended-large">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+
+                 </select>
+              </div>
+</div>
+<!----submit-->
+
+{% comment %} <div class="cta-banner">
+                    <div class="cta-banner-left">
+                        <p class='cta-line'>Press the submit button for getting the result</p>
+                    </div>
+                    <div class="cta-banner-right">
+                        <a href="/result" class='btn-cta'>submit</a>
+                    </div>
+                </div> {% endcomment %}
+                <button type="submit" class="btn btn-info d-block w-50" data-bs-toggle="popover" title="Click the Predict Button for Prediction" ><b>Predict<b></button>
+
+</form>
+    </div>
+    </section>
+    
+
+   <!---------------footer-->
+   <footer class="footer con-foot">
+    
+    <p>STAY SAFE AND HEALTHY</p>
+  </footer>
+
+
+
+{% endblock %}

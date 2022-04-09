@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% extends 'headerpage.html' %}
+{% load static %}
+
+
+
+{% block head %}
+
+
+<style>
+    /*----------photo----*/
+    .covid-area{
+     height: 50vh;
+     background:url("./static/aboutus-pic.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    
+    
+   
+ }
+ 
+ .heading2{
+   
+        position: absolute;
+        text-align:center ;
+     
+        top:25%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px;
+    }
+ 
+ .main-title2{
+     color:black;
+     font-style:inherit;
+     font-display: none;
+     border-bottom: none;
+     font-size: 30px;
+     
+ }
+ .primary2{
+     color:rgb(24, 2, 26);
+     font-style: italic;
+     font-size: 25px;
+ }
+/*---------- drop dowm menu-----*/
+.test{
+    text-align: center;
+}
+        </style>
+{% endblock head %}
+{% block body %}
+    <section class="covid-area " id="covid">
+        <div class="heading2">
+            <h1 class="main-title2">..COVIX2..</h1>
+            <p class="primary2">Your health is our primary concern</p>
+        </div>
+       
+    </section>
+<section>
+    <h1 class="header">OUR TEAM</h1>
+    <div class="team-row">
+        <div class="team-member">
+            <img src="./static/deep1.jpg" alt="images1">
+            <h2>Deepanshu Dutta</h2>
+            <p>Android/AI-ML Developer</p>
+        </div>
+
+
+        <div class="team-member">
+            <img src="./static/images2.jpg" alt="images2">
+            <h2>Bidisha Roy</h2>
+            <p>Web Developer</p>
+        </div>
+
+        <div class="team-member">
+            <img src="./static/images3.jpg" alt="images3">
+            <h2>Antara Ghosal</h2>
+            <p>Web Developer</p>
+        </div>
+
+
+        <div class="team-member">
+            <img src="./static/images4.jpg" alt="images4">
+            <h2>Sanchari Ghosal</h2>
+            <p>Web Developer</p>
+        </div>
+
+        <div class="team-member">
+            <img src="./static/images5.jpg" alt="images5">
+            <h2>Sanket Mitra</h2>
+            <p>AI-ML Developer</p>
+        </div>
+
+        <div class="team-member">
+            <img src="./static/rohit.jpg" alt="images6">
+            <h2>Rohit Prasan Mandal</h2>
+            <p>AI-ML Developer</p>
+        </div>
+    </div>
+
+    
+</section>
+
+
+
+<section>
+    <h2 class="food-menu-heading">
+        CONTACT US:  6289833582 <br>
+        email id:  covix2.covid.prediction@gmail.com
+    </h2>
+</section>
+
+
+
+
+
+
+        
+<!---------------footer-->
+        <footer class="footer con-foot">
+    
+            <p>STAY SAFE AND HEALTHY</p>
+          </footer>
+
+
+{% endblock %}

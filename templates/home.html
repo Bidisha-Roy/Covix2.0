@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends 'headerpage.html' %}
+{% load static %}
+
+{% block body %}
+    <!--------showcase area-->
+    <section class="showcase-area " id="showcase">
+        <div class="heading">
+
+            <h1 class="main-title">..COVIX2.0..</h1>
+            <p class="primary">Your health is our primary concern</p>
+        </div>
+        <div class="showcase-container">
+        
+        <a href="/covidpage" class="btn btn-primary">COVID-TEST</a>
+        </div>
+        
+    </section>
+    
+<!--DESCRIPTION-->
+ <section id="description1">
+<div class="about-wrapper container">
+    <div class="about-text">
+        <h1 class="small">COVIX2 WEBSITE</h1>
+        <p>It's our covix2.0 website,here we use machine learning to predict wheather a person have covid 19 or not.Then you can go for RTPCR test 
+        for 100% assurance</p>
+    </div>
+    <div class="about-img">
+        <img src="./static/description.jpg"alt="DESCRIPTION">
+    </div>
+</div>
+ </section>
+
+
+<!--GUIDELINES-->
+
+ <section id="food">
+     <h2>Follow the guidelines</h2>
+     <div class="food-container container">
+         <div class="food-type fruit">
+             <div class="img-container">
+                 <img src="./static/face-mask.jpg" alt="">
+                 <div class="img-content">
+                     <h3>wear face mask</h3>
+                 </div>
+             </div>
+         </div>
+          
+
+         <div class="food-type vegetables">
+            <div class="img-container">
+                <img src="./static/lockdown.jpg" alt="">
+                <div class="img-content">
+                    <h3>keep social distancing </h3>
+                    </div>
+                    </div>
+         </div>
+           <div class="food-type gain">
+            <div class="img-container">
+                <img src="./static/wash-hand.jpg" alt="">
+                <div class="img-content">
+                    <h3>wash hand properly </h3>
+                    </div>
+                    </div>
+
+           </div>
+
+     </div>
+
+ </section>
+{% endblock %}

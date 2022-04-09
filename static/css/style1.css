@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'poppins',sans-serif;
+}
+/*-------------- utility classes----------------*/
+
+
+.container{
+    max-width:1200 px;
+    width:90%;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    padding:1em 2.5em;
+    text-decoration:none;
+    border-radius:50px;
+    cursor:pointer;
+    outline:none;
+    margin-top:1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    color:#fff;
+    background:#1d836d;
+    border: 2px solid rgb(8, 51, 45);
+
+}
+.btn-primary:hover{
+    background:rgb(34, 34, 68);
+}
+
+/*------------------------ navbar styling -----------------*/
+/*---------desktop mode----------------*/
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display:none;
+}
+
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position:fixed;
+    width:100%;
+    background:rgb(231, 233, 238);
+    color:#000;
+    opacity:0.85;
+    z-index:999;
+}
+.navbar-container{
+    display: flex;
+    justify-content:space-between;
+    height:64px;
+    align-items:center;
+}
+.menu-items{
+    order:2;
+    display:flex;
+}
+.menu-items li{
+    list-style:none;
+    margin-left: 1.5rem;
+    font-size:1.8rem;
+}
+.logo{
+    order:1;
+    font-size: 3rem;
+}
+.navbar a{
+    color:#444;
+    text-decoration:none;
+    font-weight:500;
+    transition:color 0.3s ease-in-out;
+}
+
+.navbar a:hover
+{
+    color:#094d3f;
+}
+
+
+
+
+
+
+
+ /* -------------- showcase styling------------------------*/
+ .showcase-area{
+     height: 80vh;
+     background:url("../img/section1.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+    
+    
+   
+ }
+ .showcase-container{
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     justify-content: center;
+     height:100%;
+     font-size:1.6rem;
+ }
+ .heading{
+   
+        position: absolute;
+        text-align:center ;
+     
+        top:25%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px;
+    }
+ 
+ .main-title{
+     color:black;
+     font-style:inherit;
+     font-display: none;
+     border-bottom: none;
+     font-size: 30px;
+     
+ }
+ .primary{
+     color:black;
+     font-style: italic;
+     font-size: 20px;
+ }
+
+
+/*----------------description styling--------------------*/
+#description1{
+    padding:50px 0px;
+    background:#bfcbd4d5;
+    
+
+
+}
+.about-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+}
+#description1 h1{
+    font-size:3.0rem;
+}
+#description1 p{
+    font-size:1.6rem;
+    color:#555;
+
+}
+.about-img{
+    flex:1 1 400px;
+    padding:30px;
+ 
+    
+}
+
+.about-text{
+    flex:1 1 400px;
+    padding:30px;
+    margin:auto;
+}
+.about-img img{
+    display:block;
+    height:200px;
+    width:100%;
+    margin:auto;
+    object-fit:cover;
+    object-position:right;
+}
+ /* -------------- guidelines styling----------------------*/
+ #food{
+     padding:5rem 0 10rem 0;
+     background:rgb(223, 210, 210);
+
+ }
+ #food h2{
+     text-align:center;
+     font-size:3rem;
+     font-weight:400;
+     margin-bottom:40px;
+     text-transform:uppercase;
+     color:rgb(2, 34, 65);
+ }
+.food-container{
+    display:flex;
+    justify-content:space-between;
+
+}
+.food-container img{
+ display:block;
+ width:100%;
+ margin:auto;
+ max-height:170px;
+ object-fit:cover;
+ object-position:center;
+ 
+}
+.img-container{
+    margin:0 0.5 rem;
+    position:relative;
+}
+.img-content{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    text-align:center;
+    transition: all 0.3s ease-in-out 0.1s;
+    opacity:0;
+}
+
+.img-content h3{
+    color:rgb(36, 121, 88);
+    font-size:2.5rem;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+}
+.img-container::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient( 99.6deg,  rgba(112,128,152,1) 10.6%, rgba(242,227,234,1) 32.9%, rgba(234,202,213,1) 52.7%, rgba(220,227,239,1) 72.8%, rgba(185,205,227,1) 81.1%, rgba(154,180,212,1) 102.4% );
+  /*  opacity:0;*/
+    z-index:1;
+    transform:scaleY(0);
+    transform-origin:100% 100%;
+    transition:all 0.3s ease-in-out;
+}
+.img-container:hover::after{
+    opacity:1;
+    transform:scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity:1;
+    top:40%;
+}
+/*-------------- covid test styling------------*/
+/*--------------- food menu styling-----*/
+/*.food-menu-heading{
+    font-size:3rem;
+    text-align:center;
+    font-weight:400;
+    color:#666;
+}
+
+/*.food-menu-container{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    
+}
+.food-menu-item{
+    display:flex;
+    flex:1 1 200px;
+    justify-content: space-evenly;
+    margin-bottom:1px ;
+}
+.food-menu-container .food-op{
+    display:block;
+    width:230px;
+    height:20px;
+    object-fit:cover;
+   /* object-position:center;
+    padding-right: 3rem;;
+}
+.food-description{
+    margin:  0.3rem;
+}
+.food-title{
+    font-size:2.2rem;
+    font-weight:400;
+    color:#444;
+}
+.food-menu-item {
+   /* border:2px solid black;*/
+   /* background:#1d836d;
+    flex-basis: 2px;
+}*/
+.food-menu-container {
+    height:auto;
+    width:100%;
+    /*border:2px solid black;*/
+    padding:2rem;
+    box-shadow: 10px 5px 10px 10px rgb(12, 61, 63);
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:stretch;
+}
+.food-menu-item{
+   /* border:2px solid red;*/
+    margin:1rem;
+    padding:1rem;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    box-shadow: 2.5px 2.5px 10px 0px rgb(104, 101, 101);
+    background:  radial-gradient( circle farthest-corner at 10% 20%,  rgba(43,199,188,1) 0%, rgba(219,249,203,1) 72.9% );
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+.food-op{
+    display:inline;
+}
+.cars form{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    border:2px solid red;
+    padding:2rem; 
+}
+.food-title{
+    color:rgb(10, 21, 44);
+    font-style:inherit;
+    font-display: none;
+    border-bottom: none;
+    padding-right:2rem;
+}
+.food-menu-heading{
+ /*   border:2px solid green;*/
+    padding:2rem;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(14, 75, 14);
+    object-position:center;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+
+/*-------------------------cta-banner-----------------------------*/
+.cta-banner{
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(43,199,188,1) 0%, rgba(219,249,203,1) 72.9% );
+    padding: 1em;
+    box-shadow:5px 5px 10px #00000057;
+    margin-top:2rem;
+
+}
+.cta-banner-left{
+    float:left;
+    width:60%;
+}
+.cta-banner-right{
+    float:right;
+    width:40%;
+    text-align:right;
+}
+.cta-banner::after{
+    content:'';
+    display:block;
+    clear: both;
+}
+.cta-line{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:1.5rem;
+    margin-top:0.7rem;
+    font-weight: 700;
+    color:rgb(10, 21, 44);
+}
+.btn-cta{
+    text-align:centre;
+    display:inline-block;
+    font-weight:500;
+    font-size:1.5rem;
+    text-transform: uppercase;
+    border:2px solid rgb(66, 126, 111);
+    padding:0.3rem 2.5em;
+    letter-spacing:0.2rem;
+    color:#093742;
+}
+.btn-cta:hover{
+    background: rgb(167, 228, 138);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------footer--------------------*/
+.con-foot{
+    background:linear-gradient( 109.6deg,  rgba(0,0,0,1) 11.2%, rgba(11,132,145,1) 91.1% );
+  }
+  .footer{
+    
+    color: #f4f4f4f4;
+    padding:20px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.social-media-link i{
+    margin:1.5rem;
+}  
+  /*--------vaccine menu-----*/
+  
+#description2{
+    padding:50px 0px;
+    background: rgb(226, 205, 224);
+    box-shadow: 2.5px 2.5px 10px 0px rgb(104, 101, 101);}
+
+    .about2-wrapper{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #description2 h1{
+        font-size:2.0rem;
+    }
+    #description2 h3{
+        font-size:1.6rem;
+        color:#555;
+    
+    }
+    .about2-img{
+        flex:1 1 400px;
+        padding:30px;
+     
+        
+    }
+
+    
+.about2-text{
+    flex:1 1 400px;
+    padding:30px;
+    margin:auto;
+}
+.about2-img img{
+    display:block;
+    height:700px;
+    width:100%;
+    margin:auto;
+    object-fit:cover;
+    object-position:right;
+}
+.about2-text p{
+ text-decoration: none;
+ color:teal;
+ font-weight:500;
+ font-size:1.5rem;
+}
+/*---------------vaccinefooter--------------------*/
+.con-foot2{
+    background:linear-gradient( 109.6deg,  rgba(0,0,0,1) 11.2%, rgb(85, 33, 63) 91.1% );
+  }
+  .footer2{
+    
+    color: #f4f4f4f4;
+    padding:20px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.social-media-link i{
+    margin:1.5rem;
+}  
